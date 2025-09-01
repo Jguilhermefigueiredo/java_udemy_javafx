@@ -15,22 +15,23 @@ import javafx.scene.layout.HBox;
 
 import javafx.geometry.Insets;
 
-public class ListViewJavaFX extends Application{
+public class ListViewJavaFX extends Application {
     public static void main(String[] args) {
         launch(args);
-    
+
     }
+
     @Override
-    public void start (Stage palco){
+    public void start(Stage palco) {
 
         ObservableList<String> itens;
-        itens = FXCollections.observableArrayList("Item1","Item2","Item3","Item4");
+        itens = FXCollections.observableArrayList("Item1", "Item2", "Item3", "Item4");
 
         ListView<String> listView = new ListView<>(itens);
 
         VBox layout = new VBox(listView);
 
-        Scene cena = new Scene(layout,100,100);
+        Scene cena = new Scene(layout, 100, 100);
         palco.setScene(cena);
         palco.show();
     }
